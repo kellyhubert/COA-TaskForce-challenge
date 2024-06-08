@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Photo Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="gallery">
+        <div class="photo" data-details="Photo 1 details">
+            <img src="image/image1.jpg" alt="Photo 1">
+            <div class="photo-overlay"></div>
+            <div class="caption">Photo 1</div>
+            <div class="sub-caption">China</div>
+            <button>Know more</button>
+        </div>
+        <div class="photo" data-details="Photo 2 details">
+            <img src="image/image2.jpg" alt="Photo 2">
+            <div class="photo-overlay"></div>
+            <div class="caption">Photo 1</div>
+            <div class="sub-caption">China</div>
+            <div class="arrow">Know more
+               
+            </div>
+        </div>
+        <div class="photo" data-details="Photo 3 details">
+            <img src="image/image3.jpg" alt="Photo 3">
+            <div class="photo-overlay"></div>
+            <div class="caption">Photo 1</div>
+            <div class="sub-caption">China</div>
+        </div>
+        <div class="photo" data-details="Photo 2 details">
+            <img src="image/image4.jpg" alt="Photo 4">
+            <div class="photo-overlay"></div>
+            <div class="caption">Photo 1</div>
+            <div class="sub-caption">China</div>
+        </div>
+        
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption" class="caption"></div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
