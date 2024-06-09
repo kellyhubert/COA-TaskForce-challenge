@@ -1,3 +1,24 @@
+<!-- 
+Author: Kelly Hubert Irakoze
+Description:
+    This HTML code represents a responsive photo gallery webpage.
+    It includes a DOCTYPE declaration, an HTML root element, and a head element.
+    The head element contains meta tags for character encoding and viewport settings, as well as a title for the webpage.
+    It also includes a link to an external CSS file named "styles.css".
+
+    The body element contains a div element with the class "gallery", which serves as the container for the photo gallery.
+    Inside the "gallery" div, there are multiple "photo" divs, each representing a photo in the gallery.
+    Each "photo" div contains an image element, an overlay div, a caption, a sub-caption, a "know more" button, and a "details-text" div.
+    The "photo" divs also have a "data-details" attribute that provides additional details about each photo.
+
+    After the "gallery" div, there is another div with the id "lightbox" that represents a lightbox for displaying enlarged images.
+    It contains a close button, an image element for displaying the enlarged image, and a caption element for displaying the caption of the image.
+
+    Finally, the HTML code includes a script tag that links to an external JavaScript file named "script.js".
+
+    This code is part of the COA-TaskForce-challenge project and is located in the file "Gallery.html".
+-->
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,33 +29,49 @@
 </head>
 <body>
     <div class="gallery">
-        <div class="photo" data-details="Photo 1 details">
+        <div class="photo" data-details="This majestic tiger in India epitomizes the grace and power of one of the world's most revered animals.">
             <img src="image/image1.jpg" alt="Photo 1">
             <div class="photo-overlay"></div>
-            <div class="caption">Photo 1</div>
-            <div class="sub-caption">China</div>
-            <button>Know more</button>
+            <div class="caption">Tiger</div>
+            <div class="sub-caption">India</div>
+            <div class="know-more">
+                Know more<button class="blue-arrow-button">&rarr;</button>
+            </div>
+            <div class="details-text"></div>
         </div>
-        <div class="photo" data-details="Photo 2 details">
+
+        <div class="photo" data-details="This enchanting photograph captures a vibrant frog amidst the lush landscapes of Europe.">
             <img src="image/image2.jpg" alt="Photo 2">
             <div class="photo-overlay"></div>
-            <div class="caption">Photo 1</div>
-            <div class="sub-caption">China</div>
-            <div class="arrow">Know more
-               
+            <div class="caption">Frog</div>
+            <div class="sub-caption">Europe</div>
+            <div class="know-more">
+                Know more<button class="blue-arrow-button">&rarr;</button>
             </div>
+            <div class="details-text"></div>
+
         </div>
-        <div class="photo" data-details="Photo 3 details">
+
+        <div class="photo" data-details="Majestic and serene, an elephant traversing the plains of Kenya embodies the untamed beauty of Africa's wildlife">
             <img src="image/image3.jpg" alt="Photo 3">
             <div class="photo-overlay"></div>
-            <div class="caption">Photo 1</div>
-            <div class="sub-caption">China</div>
+            <div class="caption">Elephant</div>
+            <div class="sub-caption">Kenya</div>
+            <div class="know-more">
+                Know more<button class="blue-arrow-button">&rarr;</button>
+            </div>
+            <div class="details-text"></div>
         </div>
-        <div class="photo" data-details="Photo 2 details">
+
+        <div class="photo" data-details="Delicate and vibrant, a yellow bird perched amidst the lush foliage of the Australian wilderness.">
             <img src="image/image4.jpg" alt="Photo 4">
             <div class="photo-overlay"></div>
-            <div class="caption">Photo 1</div>
-            <div class="sub-caption">China</div>
+            <div class="caption">Yellow Bird</div>
+            <div class="sub-caption">Australia</div>
+            <div class="know-more">
+                Know more<button class="blue-arrow-button">&rarr;</button>
+            </div>
+            <div class="details-text"></div>
         </div>
         
     </div>
