@@ -18,7 +18,7 @@ function subarraySum(arr, target) {
 
     for (let i = 1; i < arr.length; i++) {
         // If the current sum exceeds the target, remove elements from the startIndex
-        while (currentSum > target && startIndex < i - 1) {
+        while (Math.abs(currentSum) > Math.abs(target) && startIndex < i - 1) {
             currentSum -= arr[startIndex];
             startIndex++;
         }
@@ -40,8 +40,33 @@ function subarraySum(arr, target) {
     return false;
 }
 
-// Example usage
-const arr = [4, 2, 7, 1, 9, 5];
-const target = 10;
-const result = subarraySum(arr, target);
-console.log(result);
+// this are the example to test my array manipulation implementation
+function testing() {
+    const testCases = [
+        { arr: [1, 2, 3, 7, 5], target: 12, expected: true },
+        { arr: [1, 2, 3, 4, 5, 6], target: 9, expected: true },
+        { arr: [1, 2, 3, 4, 5], target: 15, expected: true },
+        { arr: [1, 2, 3, 4, 5], target: 16, expected: false },
+        { arr: [-1, -2, -3, -4, -5], target: -10, expected: true },
+        { arr: [1, -1, 1, -1, 1], target: 0, expected: true },
+        { arr: [], target: 0, expected: false },
+        { arr: [10, 2, -2, -20, 10], target: -10, expected: true },
+        { arr: [10, 20, 30, 40], target: 100, expected: true },
+        { arr: [1, 2, 3, 4], target: 10, expected: true },
+        { arr: [1], target: 1, expected: true },
+        { arr: [1], target: 2, expected: false }
+    ];
+
+    testCases.forEach((testCase, index) => {
+        const { arr, target, expected } = testCase;
+        try {
+            const result = subarraySum(arr, target);
+            console.log(`Test Case ${index + 1}:`, result === expected ? "Passed" : "Failed");
+        } catch (error) {
+            console.log(`Test Case ${index + 1}: Failed with error - ${error.message}`);
+        }
+    });
+}
+
+// Run the testing  function
+testing();

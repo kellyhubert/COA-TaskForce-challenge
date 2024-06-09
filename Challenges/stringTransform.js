@@ -31,8 +31,25 @@ function stringTransform(str) {
     }
     return result;
 }
-// example usage
-console.log(stringTransform("Pizza"));
-console.log(stringTransform("Hamburger"));
-console.log(stringTransform("Hello, World!"));
-console.log(stringTransform("Chocolate Chip!"));
+function testStringTransform() {
+    function assert(condition, message) {
+        if (!condition) {
+            console.error("Test failed:", message);
+        } else {
+            console.log("Test passed");
+        }
+    }
+
+    // Test cases
+    assert(stringTransform("") === "", "Empty string");
+    assert(stringTransform("abc") === "cba");
+    assert(stringTransform("abcdef") === "fedcba", "String length divisible by 3");
+    assert(stringTransform("abcdefg") === "Length is not divisible by 3 or 5");
+    assert(stringTransform("abcdefgh") === "Length is not divisible by 3 or 5");
+    assert(stringTransform("abcdefghij") === "97 98 99 100 101 102 103 104 105 106");
+    assert(stringTransform("abcdefghijkl") === "lkjihgfedcba");
+    assert(stringTransform("abcdefghijklmnopqrstuvwxyz") === "Length is not divisible by 3 or 5", "Long string");
+}
+
+// Run the tests
+testStringTransform();
